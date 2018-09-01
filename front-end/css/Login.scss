@@ -1,0 +1,44 @@
+
+.container{
+	// background: url(../img/login_bg.jpg);
+	header{
+		margin: 50px 0 30px;
+	}
+	.panel {
+		width: 600px;
+		background: rgba(255,255,255,.3);
+		.login-modal{
+			padding:0 125px;
+		}
+	}	
+	@media(max-width: 600px) {
+		.panel {
+			width: 100%;
+			.login-modal{
+				padding:0 0;
+			}
+		}
+	}
+}
+
+.login_panel{
+	display: none;
+}
+
+.register_panel{
+	display: none;
+}
+
+.logined_panel{
+	display: none;
+	.userpic{
+		img{
+			width:130px;
+			height: 130px;
+			border-radius:65px;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+

@@ -1,0 +1,32 @@
+.nav-top {
+  box-shadow: 0px 2px 10px #8F8F8F; }
+  .nav-top .nav-top-ctt {
+    width: 1050px; }
+    .nav-top .nav-top-ctt .kanpu-super {
+      width: 200px;
+      line-height: 50px; }
+      .nav-top .nav-top-ctt .kanpu-super span {
+        vertical-align: middle;
+        margin: 0 0;
+        display: inline-block; }
+      .nav-top .nav-top-ctt .kanpu-super .kanpu-brand {
+        width: 80px;
+        font-size: 26px; }
+      .nav-top .nav-top-ctt .kanpu-super .super-brand {
+        font-size: 16px; }
+
+.container {
+  width: 1050px; }
+  .container * {
+    overflow: hidden; }
+
+.user-panel {
+  display: none; }
+
+.post-panel {
+  display: none; }
+
+.reply-panel {
+  display: none; }
+
+/*# sourceMappingURL=manager.css.map */

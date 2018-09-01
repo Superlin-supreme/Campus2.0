@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>侃噗-为校园生活而生</title>
+	<link rel="shortcut icon" href="img/Campus.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/Global.css" />
+	<link rel="stylesheet" type="text/css" href="css/Login.css" />
+</head>
+<body>
+	<div class="Global_bg">
+		<img src="img/Global_bg.jpg">
+	</div>
+	<div class="container">
+		<header class="text-center">
+			<h1>侃噗</h1>
+			<h4 class="text-muted">为你的校园生活而生</h4>
+		</header>
+		<div class="panel center-block login_panel">
+			<div class="panel-heading text-center">
+				<h3 class="panel-title mt-10">登录</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row login-modal">
+					<div class="col-md-12 login-wrap">
+						<form>
+							<div class="form-group mt-10">
+								<label for="username">手机号 或 Email</label>
+								<input type="text" name="" class="form-control" id="username" placeholder="11位手机号 或 Email"/>
+							</div>
+							<div class="form-group">
+								<label for="password">密码</label>
+								<input type="password" name="" class="form-control" id="password" placeholder="请输入密码"/>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-success" id="login_btn">登录</button>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-default" id="register_btn">注册新账号</button>
+							</div>
+							<div class="form-group text-center">
+								<a href="" class="text-success" id="visitor_btn">以游客身份进入</a>
+							</div>
+						</form>
+						<p class="text-center text-muted">登录即表示你同意网站的<a href="" class="text-success">《服务条款》</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel center-block register_panel">
+			<div class="panel-heading text-center">
+				<h3 class="panel-title mt-10">注册</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row login-modal">
+					<div class="col-md-12 login-wrap">
+						<form>
+							<div class="form-group mt-10">
+								<label for="newname">你的名字<span class="text-danger">*</span></label>
+								<input type="text" name="user_name" class="form-control" id="newname" placeholder="真实名字或昵称"/>
+							</div>
+							<div class="form-group mt-10">
+								<label for="userage">你的年龄</label>
+								<input type="text" name="age" class="form-control" id="userage" placeholder="真实年龄"/>
+							</div>
+							<div class="form-group">
+								<label for="usersex">你的性别<span class="text-danger">*</span></label>
+								<label class="radio-inline ml-10">
+									<input type="radio" name="sexOptions" id="inlineRadio1" value="1"> 男
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="sexOptions" id="inlineRadio2" value="0"> 女
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="userwechat">微信号</label>
+								<input type="text" name="wechat" class="form-control" id="userwechat" placeholder="能联系的微信号"/>
+							</div>
+							<div class="form-group">
+								<label for="userphone">手机号<span class="text-danger">*</span></label>
+								<input type="text" name="phone" class="form-control" id="userphone" placeholder="11位手机号"/>
+							</div>
+							<div class="form-group">
+								<label for="useremail">Email<span class="text-danger">*</span></label>
+								<input type="text" name="em" class="form-control" id="useremail" placeholder="正确的Email地址"/>
+							</div>
+							<div class="form-group">
+								<label for="useredeptname">学院<span class="text-danger">*</span></label>
+								<select class="form-control" id="useredeptname">
+									<option value="-1">请选择学院</option>
+									<option value="000">英语语言文化学院</option>
+									<option value="001">经济贸易学院</option>
+									<option value="015">商学院</option>
+									<option value="101">会计学院</option>
+									<option value="100">信息科学与技术学院</option>
+									<option value="007">金融学院</option>
+									<option value="320">中国语言文化学院</option>
+									<option value="330">西方语言文化学院</option>
+									<option value="540">东方语言文化学院</option>
+									<option value="777">英语教育学院</option>
+									<option value="210">高级翻译学院</option>
+									<option value="954">政治与公共管理学院</option>
+									<option value="846">新闻与传播学院</option>
+									<option value="472">马克思主义学院</option>
+									<option value="666">艺术学院</option>
+									<option value="998">国际学院</option>
+									<option value="110">法学院</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="userdormitory">宿舍</label>
+								<input type="text" name="dormitory" class="form-control" id="useredormitory" placeholder="你的宿舍，如：南苑12栋"/>
+							</div>
+							<div class="form-group">
+								<label for="newpwd1">密码<span class="text-danger">*</span></label>
+								<input type="password" name="" class="form-control" id="newpwd1" placeholder="不少于5位的密码"/>
+							</div>
+							<div class="form-group">
+								<label for="newpwd2">确认密码<span class="text-danger">*</span></label>
+								<input type="password" name="" class="form-control" id="newpwd2" placeholder="请再次输入密码"/>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-success" id="rg_btn">注册</button>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-default" id="return_login_btn">已有账号登录</button>
+							</div>
+						</form>
+						<p class="text-center text-muted">登录即表示你同意网站的<a href="#" class="text-success">《服务条款》</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel center-block logined_panel">
+			<div class="panel-heading text-center">
+				<h3 class="panel-title mt-10">检测到已登录</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row login-modal">
+					<div class="col-md-12 login-wrap">
+						<div class="userpic"><img src="img/girl.png" id="cuserpic"></div>
+						<h3 class="text-center text-muted mt-10" id="cusername">小姐姐</h3>
+						<form class="mt-10">
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-success" id="enterindex">进入侃噗</button>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn-block btn btn-default" id="logout_btn">切换账号</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

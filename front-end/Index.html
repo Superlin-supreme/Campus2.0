@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>侃噗-为校园生活而生</title>
+	<link rel="shortcut icon" href="img/Campus.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/Global.css" />
+	<link rel="stylesheet" type="text/css" href="css/Index.css" />
+</head>
+<body>
+	<div class="Global_bg">
+		<img src="img/Global_bg.jpg">
+	</div>
+	<nav class="navbar navbar-default nav-top">
+		<div class="container-fluid nav-top-ctt">
+			<div class="navbar-header txt-20 text-center kanpu-brand">
+				<button type="button" class="navbar-toggle collapsed menu_btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<button type="button" class="navbar-toggle pull-right login_small_btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>	
+				<p>侃噗</p>						
+			</div>
+			<div class="collapse navbar-collapse ntc" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav txt-16 ntc-nav">
+					<li class="active home_btn"><a href="###">首页</a></li>
+					<li class="list_btn"><a href="###">我的发布</a></li>
+					<li class="none_done_btn"><a href="###">圈子</a></li>
+					<li class="none_done_btn"><a href="###">APP下载</a></li>
+				</ul>
+				<form class="navbar-form navbar-left ntc-nav-forml">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="搜索感兴趣的内容...">
+						<span class="input-group-btn">
+							<button class="btn btn-default none_done_btn" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						</span>
+					</div>
+				</form>
+				<form class="navbar-form navbar-right join_kanpu">
+					<div class="form-group">
+						<button type="button" class="btn-block btn btn-success" >加入侃噗</button>
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right top_login">
+					<li><a href="###">立即登录</a></li>
+				</ul>
+				<div class="navbar-right userpic userlogined btn-group">
+					<img src="img/girl.png" id="cuserpic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<ul class="dropdown-menu panel mt-5">
+						<li><a href="#" class="userhome_btn1"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span><span class="dm-nav-text">我的首页</span></a></li>
+						<li class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><span class="dm-nav-text">设置</span></a></li>
+						<li class="logout_btn"><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><span class="dm-nav-text">退出</span></a></li>
+					</ul>
+				</div>	
+				<div class="navbar-right msgbtn userlogined">
+					<img src="img/msg_btn.png" class="msg_btn" ><span class="badge msg-all-num msg-all-num1"></span>
+				</div>		
+			</div>	
+			<div class="collapse navbar-collapse userbtn2" id="bs-example-navbar-collapse-2">
+				<ul class="nav navbar-nav txt-16 ntc-nav userbtn2-ul">
+					<li class="logined_btn"><a href="###" class="userhome_btn2">我的首页</a></li>
+					<li class="logined_btn msg_btn"><a href="###">我的消息<span class="badge msg-all-num pull-right"></span></a></li>
+					<li class="logined_btn logout_btn"><a href="###">退出</a></li>
+					<li class="top_login"><a href="">立即登录</a></li>
+					<li class="join_kanpu"><a href="">加入侃噗</a></li>
+				</ul>		
+			</div>			
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row post-panel">
+			<div class="col-md-8 ctt-lt">
+				<div class="home-panel"> 		
+					<nav class="navbar navbar-default panel">
+						<ul class="nav navbar-nav txt-18 user-panel">
+							<li data-toggle="modal" data-target="#newhostModal"><a href="###"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 发布订单</a></li>
+							<li><a href="###" class="none_done_btn"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 讲故事</a></li>
+							<li><a href="###" class="none_done_btn"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 写文章</a></li>
+						</ul>		
+					</nav>	
+					<div class="host-list" id="all-list">
+					</div>
+					<div class="more-post mb-15 text-center">
+						<div class="alert alert-success" role="alert" id="nomorepost">没有更多帖子噜</div>
+						<button class="btn btn-default btn-block" id="loadmore_btn">点击加载更多</button>
+					</div>
+				</div>
+
+				<div class="current-user-panel">	 		
+					<nav class="navbar navbar-default panel">
+						<ul class="nav navbar-nav txt-18 user-panel">
+							<li class="active"><a href="###" id="all-list-btn"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> 全部订单</a></li>
+							<li><a href="###" id="not-list-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 未完成的订单</a></li>
+							<li><a href="###" id="done-list-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 已完成的订单</a></li>
+						</ul>		
+					</nav>	
+					<div class="host-list" id="user-list">
+					</div>
+					<div class="more-post mb-15 text-center">
+						<div id="user-list-alert" class="alert alert-success" role="alert">没有更多帖子噜</div>
+					</div>
+				</div>
+				<div class="other-user-panel">	 		
+					<div class="panel panel-default other-user-info">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-3 col-sm-3 info-box">
+									<img src="img/girl.png" class="other-user-portrait center-block">
+								</div>
+								<div class="col-md-9 col-sm-9 info-box">
+									<h3 class="other-user-name">小姐姐</h3>
+									<p class="other-user-label">好看的小姐姐 超好看的小姐姐</p>
+									<div class="other-user-btn">
+										<button type="button" class="btn btn-default check_friend_btn">添加好友</button>
+										<button type="button" class="btn btn-success talk_btn">私信</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="host-list" id="other-user-list">
+					</div>
+					<div class="more-post mb-15 text-center">
+						<div id = "other-user-list-alert" class="alert alert-success" role="alert">没有更多帖子噜</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="col-md-4 ctt-rt">
+				<div class="rt-nav">
+					<ul class="panel nav nav-stacked">
+						<li role="presentation" class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="rt-nav-text">我可能感兴趣的</span><span class="badge pull-right">4</span></a></li>
+						<li role="presentation" class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="rt-nav-text">加入圈子</span></a></li>
+						<li role="presentation" class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><span class="rt-nav-text">故事会</span></a></li>
+						<li role="presentation" class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><span class="rt-nav-text">好文章</span><span class="badge pull-right">6</span></a></li>
+						<li role="presentation" class="none_done_btn"><a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="rt-nav-text">校内活动</span><span class="badge pull-right">16</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<div class="row chat-panel">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading"><span class="friend-username">选择好友开始聊天吧</span></div>
+					<div class="panel-body msg-list-box">
+						<div class="msg-list">
+						</div>						
+					</div>
+					<div class="panel-footer">
+						<div class="input-group">
+							<input type="text" class="form-control" id="send_msg_ctt">
+							<span class="input-group-btn">
+								<button class="btn btn-default" id="send_msg_btn" type="button">发送</button>
+							</span>
+						</div>	
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">好友列表</div>
+					<div class="friend-box">
+						<ul class=" nav nav-stacked friend-list">
+						</ul>					
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">好友申请和管理</div>
+					<div class="all-relation-box">
+						<ul class=" nav nav-stacked all-relation-list">
+						</ul>
+						<div class="input-group text-center pl-10 pr-10 mb-10 mt-10">
+							<input type="text" class="form-control" id="addfriend_phone" placeholder="输入Ta的手机号...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" id="addfriend_btn" type="button">发出申请</button>
+							</span>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row userhome-panel">
+			<div class="col-md-12">
+				<div class="panel panel-default info-panel">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-2" class="portraitbox">
+								<img src="img/girl.png" class="cuserportrait center-block">
+								<button type="button" class="btn btn-success center-block mt-10 none_done_btn">修改头像</button>
+								<button type="button" class="btn btn-default center-block mt-10"  data-toggle="modal" data-target="#changepwdModal">修改密码</button>
+							</div>
+							<div class="col-md-10 info-body info-username">
+								<div class="info-box cusername-box" data-attr="user_name">
+									<span class="cusername info-ctt">小姐姐</span>
+									<a href="javascript:void(0)" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+									<div class="input-group">
+										<input type="text" class="form-control">
+										<button type="submit" class="btn btn-success save-info">保存</button>
+										<button type="button" class="btn btn-success cancel-btn">取消</button>
+									</div>	
+								</div>	
+								<p class="phoneinfo mt-5">点击信息进行修改</p>						
+								<table class="info-list text-muted">
+									<tr class="info-box" data-attr="userLabel">
+										<td class="info-name"><span>描述</span></td>
+										<td class="info-content">
+											<span class="info-ctt user-label">好看的小姐姐</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>											
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>									
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="sex">
+										<td class="info-name"><span>性别</span></td>
+										<td class="info-content">
+											<span class="info-ctt sex">女</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<div>
+												<label class="radio-inline">
+													<input type="radio" name="sexOptions" id="inlineRadio1" value="1"> 男
+												</label>
+												<label class="radio-inline">
+													<input type="radio" name="sexOptions" id="inlineRadio2" value="0"> 女
+												</label></div>
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="info-box" data-attr="age">
+										<td class="info-name"><span>年龄</span></td>
+										<td class="info-content">
+											<span class="info-ctt age"></span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="wechat">
+										<td class="info-name"><span>微信号</span></td>
+										<td class="info-content">
+											<span class="info-ctt wechat">dfhdhf3335</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="phone">
+										<td class="info-name"><span>手机号</span></td>
+										<td class="info-content">
+											<span class="info-ctt phone">12344455</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="email">
+										<td class="info-name"><span>Email</span></td>
+										<td class="info-content">
+											<span class="info-ctt email">123333@qq.com</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="dept_name">
+										<td class="info-name"><span>学院</span></td>
+										<td class="info-content">
+											<span class="info-ctt dept_name">金融学院</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<select class="form-control" id="useredeptname">
+													<option value="-1">请选择学院</option>
+													<option value="000">英语语言文化学院</option>
+													<option value="001">经济贸易学院</option>
+													<option value="015">商学院</option>
+													<option value="101">会计学院</option>
+													<option value="100">信息科学与技术学院</option>
+													<option value="007">金融学院</option>
+													<option value="320">中国语言文化学院</option>
+													<option value="330">西方语言文化学院</option>
+													<option value="540">东方语言文化学院</option>
+													<option value="777">英语教育学院</option>
+													<option value="210">高级翻译学院</option>
+													<option value="954">政治与公共管理学院</option>
+													<option value="846">新闻与传播学院</option>
+													<option value="472">马克思主义学院</option>
+													<option value="666">艺术学院</option>
+													<option value="998">国际学院</option>
+													<option value="110">法学院</option>
+												</select>
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>	
+										</td>
+									</tr>
+									<tr class="info-box" data-attr="dormitory">
+										<td class="info-name"><span>宿舍</span></td>
+										<td class="info-content">
+											<span class="info-ctt dormitory">北苑3</span>
+											<a href="###" class="change-btn"><span class="glyphicon glyphicon-pencil change-icon" aria-hidden="true"></span>修改</a>
+											<div class="input-group">
+												<input type="text" class="form-control">
+												<button type="submit" class="btn btn-success save-info">保存</button>
+												<button type="button" class="btn btn-success cancel-btn">取消</button>
+											</div>
+										</td>
+									</tr>									
+								</table>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  	<!-- Modal -->
+  	<div class="modal fade" id="newhostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel">写下你的需求</h4>
+  				</div>
+  				<div class="modal-body">				
+  					<form>
+  						<div class="form-group">
+  							<label for="newhosttitle">需求标题</label>
+  							<input type="text" class="form-control" id="newhosttitle" placeholder="突出主题">
+  						</div>
+  						<div class="form-group">
+  							<label for="newhostctt">需求描述</label>
+  							<textarea class="form-control" rows="3" id="newhostctt" placeholder="描述尽量具体"></textarea>
+  						</div>
+  					</form>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class="btn btn-success" id="announce_btn">发布</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="modal fade" id="changepwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<button type="button" class="close changepwdModal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel">修改密码</h4>
+  				</div>
+  				<div class="modal-body">				
+  					<form>
+  						<div class="form-group">
+  							<label for="oldpwd">旧密码<span class="text-danger">*</span></label>
+  							<input type="password" class="form-control" id="oldpwd" placeholder="请输入当前密码">
+  						</div>
+  						<div class="form-group">
+  							<label for="newpwd1">密码<span class="text-danger">*</span></label>
+  							<input type="password" name="" class="form-control" id="newpwd1" placeholder="请输入密码"/>
+  						</div>
+  						<div class="form-group">
+  							<label for="newpwd2">确认密码<span class="text-danger">*</span></label>
+  							<input type="password" name="" class="form-control" id="newpwd2" placeholder="请再次输入密码"/>
+  						</div>
+  					</form>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class="btn btn-success" id="changepwd_btn">修改</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="modal fade" id="makepostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<button type="button" class="close changepwdModal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel">确定接单</h4>
+  				</div>
+  				<div class="modal-body">				
+  					<p>您确定接单吗？</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+  					<button type="button" class="btn btn-success" id="makepost_btn">确定</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

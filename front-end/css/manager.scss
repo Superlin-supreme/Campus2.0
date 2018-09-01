@@ -1,0 +1,43 @@
+.nav-top{
+	 box-shadow:0px 2px 10px #8F8F8F;
+	.nav-top-ctt{
+		width:1050px;
+		.kanpu-super{
+			width: 200px;
+			line-height: 50px;
+			span{
+				vertical-align: middle;
+				margin: 0 0;
+				display: inline-block;
+			}
+			.kanpu-brand{
+				width: 80px;
+				font-size: 26px;		
+			}
+			.super-brand{
+				font-size:16px;
+			}
+		}
+		
+	}
+}
+
+.container{
+	*{
+		overflow: hidden;
+	}
+	width: 1050px;
+
+}
+
+.user-panel{
+	display:none;
+}
+
+.post-panel{
+	display:none;
+}
+
+.reply-panel{
+	display:none;
+}

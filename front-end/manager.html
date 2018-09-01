@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>侃噗-后台管理界面</title>
+	<link rel="shortcut icon" href="img/Campus.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/Global.css" />
+	<link rel="stylesheet" type="text/css" href="css/manager.css" />
+</head>
+<body>
+	<div class="Global_bg">
+		<img src="img/Global_bg.jpg">
+	</div>
+	<nav class="navbar navbar-default nav-top">
+		<div class="container-fluid nav-top-ctt">
+			<div class="navbar-header text-center kanpu-super">
+				<span class="kanpu-brand">侃噗</span><span class="super-brand">后台管理界面</span>			
+			</div>
+			<div class="collapse navbar-collapse ntc">
+				<ul class="nav navbar-nav txt-16 ntc-nav">
+					<li class="active user_panel_btn"><a href="javascript:void(0)">用户</a></li>
+					<li class="post_panel_btn"><a href="javascript:void(0)">订单</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right logined_btn">
+					<li><a href="###">欢迎你！<span class="text-muted logined_name">管理者1</span></a></li>
+					<li class="logout_btn"><a href="###">退出</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</nav>
+	<div class="container">
+		<div class="panel panel-default user-panel">
+			<div class="panel-heading">管理用户</div>
+			<div class="panel-body">
+				<table class="table table-striped user-list">
+					<tr>
+						<th>UID</th>
+						<th>用户昵称</th>
+						<th>用户签名</th>
+						<th>密码</th>
+						<th>性别</th>
+						<th>年龄</th>
+						<th>微信</th>
+						<th>手机号</th>
+						<th>邮箱</th>
+						<th>学院</th>
+						<th>宿舍</th>
+						<th>操作</th>
+					</tr>
+				</table>			
+			</div>
+		</div>
+		<div class="panel panel-default post-panel">
+			<div class="panel-heading">管理订单</div>
+			<div class="panel-body">
+				<table class="table table-striped post-list">
+					<tr>
+						<th>订单号</th>
+						<th>发布用户ID</th>
+						<th style="width: 70px;">用户名</th>
+						<th>标题</th>
+						<th style="width: 250px;">内容</th>
+						<th style="width: 70px;">疑问数</th>
+						<th>状态</th>
+						<th>接单用户ID</th>
+						<th>操作</th>
+					</tr>
+				</table>			
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="deluserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<button type="button" class="close changepwdModal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel">删除用户</h4>
+  				</div>
+  				<div class="modal-body">				
+  					<p>您将删除此用户的所有信息以及其发过的所有订单、回复等，确定删除吗？</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+  					<button type="button" class="btn btn-success" id="deluser_btn">确定</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="modal fade" id="delpostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  		<div class="modal-dialog" role="document">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<button type="button" class="close changepwdModal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<h4 class="modal-title" id="myModalLabel">删除订单</h4>
+  				</div>
+  				<div class="modal-body">				
+  					<p>您将删除此订单的所有信息以及其疑问和回复，确定删除吗？</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+  					<button type="button" class="btn btn-success" id="delpost_btn">确定</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/manager.js"></script>
+</body>
+</html>
